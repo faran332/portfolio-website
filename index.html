@@ -51,6 +51,30 @@
           <button class="main__btn" onclick="openContactForm()">
             <p>Contact me</p>
           </button>
+          <div class="contact__form--container" id="contact-form">
+            <div class="close__form">
+              <button
+                type="button"
+                class="close__btn"
+                onclick="closeContactForm()"
+              >
+                X
+              </button>
+            </div>
+            <div class="contact__form--content">
+              <h3>Leave me a message and i will reach back to you</h3>
+              <form>
+                <label for="fname">First Name:</label>
+                <label for="sname">Second Name:</label>
+                <label for="email">Your Email for contact:</label>
+                <label for="message">Message:</label>
+              </form>
+              <p>Message has been successfully submitted. Thanks!</p>
+              <button class="send__btn" onclick="sendMessage()">
+                <p>Send</p>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="main__img--container">
           <img
