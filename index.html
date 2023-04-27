@@ -12,6 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("rvVDDyWlwKXMfeqn1");
+      })();
+    </script>
   </head>
   <body>
     <!-- Navbar Section -->
@@ -64,12 +73,29 @@
             <div class="contact__form--content">
               <h3>Leave me a message and i will reach back to you</h3>
               <form>
-                <label for="fname">First Name:</label>
-                <label for="sname">Second Name:</label>
-                <label for="email">Your Email for contact:</label>
-                <label for="message">Message:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="Name"
+                  class="form__input"
+                  placeholder="Name"
+                />
+                <input
+                  type="text"
+                  id="email"
+                  name="Email"
+                  class="form__input"
+                  placeholder="Email"
+                />
+                <textarea
+                  name="message"
+                  id="message-box"
+                  class="form__input"
+                  cols="30"
+                  rows="10"
+                  placeholder="Message"
+                ></textarea>
               </form>
-              <p>Message has been successfully submitted. Thanks!</p>
               <button class="send__btn" onclick="sendMessage()">
                 <p>Send</p>
               </button>

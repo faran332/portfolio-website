@@ -5,6 +5,8 @@
     font-family: 'Raleway', sans-serif;
 }
 
+form { max-width:420px; margin:50px auto; }
+
 /* Navbar Section */
 
 .navbar {
@@ -301,7 +303,7 @@
 .contact__form--container {
     width: 400px;
     border-radius: 6px;
-    background: #48494B;
+    background: rgb(30,30,40);
     position: absolute;
     top: 0%;
     left: 50%;
@@ -319,6 +321,30 @@
 .contact__form--content {
     padding: 30px 30px;
     text-align: center;
+}
+
+.form__input {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #CC6666;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+
+.form__input:focus { border:2px solid #CC4949; }
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
 }
 
 .contact__form--content h3{
@@ -342,6 +368,10 @@
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.send__btn:hover {
+    background: #6fd530;
 }
 
 .close__form {
