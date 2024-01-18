@@ -5,6 +5,8 @@
     font-family: 'Raleway', sans-serif;
 }
 
+form { max-width:420px; margin:50px auto; }
+
 /* Navbar Section */
 
 .navbar {
@@ -297,6 +299,115 @@
     height: 80%;
     width: 80%;
 }
+
+.contact__form--container {
+    width: 400px;
+    border-radius: 6px;
+    background: rgb(30,30,40);
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-contact__form--container {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.contact__form--content {
+    padding: 30px 30px;
+    text-align: center;
+}
+
+.form__input {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #CC6666;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+
+.form__input:focus { border:2px solid #CC4949; }
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+.contact__form--content h3{
+    font-size: 2rem;
+    background-color: #fff;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.send__btn {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.send__btn:hover {
+    background: #6fd530;
+}
+
+.close__form {
+    padding: 20px 20px;
+}
+
+.close__btn {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.close__btn:hover {
+    opacity: 1;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+  
+.close:after {
+    transform: rotate(-45deg);
+}
+
 
 /* Mobile Response */
 @media screen and (max-width: 768px) {

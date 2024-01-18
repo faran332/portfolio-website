@@ -12,6 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("rvVDDyWlwKXMfeqn1");
+      })();
+    </script>
   </head>
   <body>
     <!-- Navbar Section -->
@@ -51,6 +60,47 @@
           <button class="main__btn" onclick="openContactForm()">
             <p>Contact me</p>
           </button>
+          <div class="contact__form--container" id="contact-form">
+            <div class="close__form">
+              <button
+                type="button"
+                class="close__btn"
+                onclick="closeContactForm()"
+              >
+                X
+              </button>
+            </div>
+            <div class="contact__form--content">
+              <h3>Leave me a message and i will reach back to you</h3>
+              <form>
+                <input
+                  type="text"
+                  id="name"
+                  name="Name"
+                  class="form__input"
+                  placeholder="Name"
+                />
+                <input
+                  type="text"
+                  id="email"
+                  name="Email"
+                  class="form__input"
+                  placeholder="Email"
+                />
+                <textarea
+                  name="message"
+                  id="message-box"
+                  class="form__input"
+                  cols="30"
+                  rows="10"
+                  placeholder="Message"
+                ></textarea>
+              </form>
+              <button class="send__btn" onclick="sendMessage()">
+                <p>Send</p>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="main__img--container">
           <img
